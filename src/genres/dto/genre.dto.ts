@@ -1,3 +1,3 @@
 export interface CreateGenreDTO {
-  names: string;
+  names: string[];
 }
