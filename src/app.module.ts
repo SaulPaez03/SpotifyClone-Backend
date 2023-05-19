@@ -1,9 +1,18 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { MongooseModule } from '@nestjs/mongoose';
+import { GenreModule } from './genres/genres.module';
+import { SongsMOdule } from './songs/songs.module';
 
 @Module({
-  imports: [],
+  imports: [
+    MongooseModule.forRoot(
+      'mongodb+srv://saulpaez03:100402@saulpaez03.keavy.mongodb.net/Spotify',
+    ),
+    GenreModule,
+    SongsMOdule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
