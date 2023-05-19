@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import { GenreModule } from './genres/genres.module';
 import { SongsMOdule } from './songs/songs.module';
+import { AlbumModule } from './albums/album.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { SongsMOdule } from './songs/songs.module';
     ),
     GenreModule,
     SongsMOdule,
+    AlbumModule,
   ],
   controllers: [AppController],
   providers: [AppService],
