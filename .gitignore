@@ -36,3 +36,11 @@ lerna-debug.log*
 package-lock.json
 src/songs/dto/songs.dto.ts
 .env
+1616;
+Agent
+echo
+pid
+export
+SSH_AGENT_PID;
+SSH_AGENT_PID=1616;
+SSH_AUTH_SOCK;
