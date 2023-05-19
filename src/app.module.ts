@@ -6,11 +6,10 @@ import { GenreModule } from './genres/genres.module';
 import { SongsMOdule } from './songs/songs.module';
 import { AlbumModule } from './albums/album.module';
 
+require('dotenv').config();
 @Module({
   imports: [
-    MongooseModule.forRoot(
-      'mongodb+srv://saulpaez03:100402@saulpaez03.keavy.mongodb.net/Spotify',
-    ),
+    MongooseModule.forRoot(process.env.MONGO_CONNECTION_URL),
     GenreModule,
     SongsMOdule,
     AlbumModule,

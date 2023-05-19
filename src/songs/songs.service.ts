@@ -25,7 +25,6 @@ export class SongsService {
       .upload(songPath, {
         folder: 'spotifySongs',
         resource_type: 'video',
-        filename_override: song.title,
       })
       .catch((e) => {
         console.log(e);
@@ -49,4 +48,5 @@ export class SongsService {
       title: song.title,
     });
   }
+  
 }
