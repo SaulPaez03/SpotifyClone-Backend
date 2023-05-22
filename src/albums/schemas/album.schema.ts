@@ -1,6 +1,7 @@
 import { MongooseModule, Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 import { Song } from 'src/songs/schemas/songs.schema';
+import { User } from 'src/users/schemas/users.schema';
 export type AlbumDocument = mongoose.HydratedDocument<Album>;
 @Schema()
 export class Album {
@@ -21,6 +22,8 @@ export class Album {
   releaseDate: string;
   @Prop({ required: true })
   cover_image: string;
+  @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }] })
+  artists: User[];
 }
 
 export const AlbumSchema = SchemaFactory.createForClass(Album);
