@@ -7,8 +7,12 @@ export class Album {
   @Prop({ required: true })
   title: string;
   @Prop({
-    type: mongoose.Schema.Types.ObjectId,
-    refs: 'songs',
+    type: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        refs: 'Song',
+      },
+    ],
   })
   songs: Song[];
   @Prop()
