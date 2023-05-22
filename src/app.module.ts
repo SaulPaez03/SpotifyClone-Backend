@@ -7,6 +7,7 @@ import { SongsMOdule } from './songs/songs.module';
 import { AlbumModule } from './albums/album.module';
 import { ProfileModule } from './profile/proofile.module';
 import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
 
 require('dotenv').config();
 @Module({
@@ -17,6 +18,7 @@ require('dotenv').config();
     AlbumModule,
     ProfileModule,
     UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
