@@ -8,7 +8,7 @@ import {
   UseInterceptors,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { CreateAlbumDTO } from './dto/createAlbum.dto';
+import { CreateAlbumDTO } from './createAlbum.dto';
 import { AlbumService } from './album.service';
 
 @Controller('album')

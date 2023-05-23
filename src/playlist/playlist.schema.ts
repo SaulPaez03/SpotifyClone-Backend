@@ -1,9 +1,9 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
 import { type } from 'os';
-import { Song } from 'src/songs/schemas/songs.schema';
-import { User } from 'src/users/schemas/users.schema';
-import { PlaylistSong } from '../interfaces/playlist.interface';
+import { Song } from 'src/songs/songs.schema';
+import { User } from 'src/users/users.schema';
+import { PlaylistSong } from './playlist.interface';
 
 export type PlaylistDocument = mongoose.HydratedDocument<Playlist>;
 @Schema()

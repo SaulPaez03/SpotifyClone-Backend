@@ -6,7 +6,7 @@ import {
   Inject,
   Post,
 } from '@nestjs/common';
-import { CreateGenreDTO } from './dto/genre.dto';
+import { CreateGenreDTO } from './genre.dto';
 import { GenresService } from './genres.service';
 
 @Controller('genres')

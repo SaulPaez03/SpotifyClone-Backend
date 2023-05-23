@@ -1,6 +1,6 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
-import { Genre } from 'src/genres/schemas/genres.schema';
+import { Genre } from 'src/genres/genres.schema';
 
 @Schema()
 export class Song {

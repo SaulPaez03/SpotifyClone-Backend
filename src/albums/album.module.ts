@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Album, AlbumSchema } from './schemas/album.schema';
+import { Album, AlbumSchema } from './album.schema';
 import { AlbumService } from './album.service';
 import { AlbumController } from './album.controller';
 

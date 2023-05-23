@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Playlist, PlaylistSchema } from './schemas/playlist.schema';
+import { Playlist, PlaylistSchema } from './playlist.schema';
 
 @Module({
   imports: [

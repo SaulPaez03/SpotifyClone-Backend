@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Genre } from './schemas/genres.schema';
+import { Genre } from './genres.schema';
 import { Model } from 'mongoose';
 Injectable();
 export class GenresService {

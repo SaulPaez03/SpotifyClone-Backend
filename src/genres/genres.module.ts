@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Genre, GenreSchema } from './schemas/genres.schema';
+import { Genre, GenreSchema } from './genres.schema';
 import { GenresController } from './genres.controller';
 import { GenresService } from './genres.service';
 

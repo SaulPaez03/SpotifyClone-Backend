@@ -1,11 +1,11 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Song } from './schemas/songs.schema';
+import { Song } from './songs.schema';
 import { Model } from 'mongoose';
-import { createSongDTO } from './dto/songs.dto';
+import { createSongDTO } from './songs.dto';
 import { v2 as cloudinary } from 'cloudinary';
 import { getMulterFileDataURI } from 'lib/files';
-import { Genre } from 'src/genres/schemas/genres.schema';
+import { Genre } from 'src/genres/genres.schema';
 
 @Injectable()
 export class SongsService {

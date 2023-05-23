@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Album } from './schemas/album.schema';
+import { Album } from './album.schema';
 import { Model } from 'mongoose';
-import { CreateAlbumDTO } from './dto/createAlbum.dto';
+import { CreateAlbumDTO } from './createAlbum.dto';
 import { getMulterFileDataURI } from 'lib/files';
 import { v2 as cloudinary } from 'cloudinary';
 

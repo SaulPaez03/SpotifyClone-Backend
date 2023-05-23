@@ -1,4 +1,4 @@
-import { UserRoles } from 'src/users/interfaces/user.interface';
+import { UserRoles } from 'src/users/user.interface';
 
 export class SignUpDTO {
   password: string;

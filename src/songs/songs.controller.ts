@@ -11,7 +11,7 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { SongsService } from './songs.service';
-import { createSongDTO as createSongDTO } from './dto/songs.dto';
+import { createSongDTO as createSongDTO } from './songs.dto';
 import { Request, Express } from 'express';
 import {
   FileFieldsInterceptor,
