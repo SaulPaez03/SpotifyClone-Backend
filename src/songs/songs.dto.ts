@@ -5,4 +5,5 @@ export class createSongDTO {
   genres: string;
   album: string;
   data: Express.Multer.File;
+  artists: string;
 }

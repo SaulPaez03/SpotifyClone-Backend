@@ -4,6 +4,7 @@ import { Song, SongSchema } from './songs.schema';
 import { SongsService } from './songs.service';
 import { SongsController } from './songs.controller';
 import { GenreModule } from 'src/genres/genres.module';
+import { AlbumModule } from 'src/albums/album.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { GenreModule } from 'src/genres/genres.module';
       },
     ]),
     GenreModule,
+    AlbumModule,
   ],
   exports: [MongooseModule],
   controllers: [SongsController],

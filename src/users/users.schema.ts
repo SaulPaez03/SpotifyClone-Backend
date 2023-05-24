@@ -3,9 +3,19 @@ import { UserRoles } from './user.interface';
 import { HydratedDocument } from 'mongoose';
 export type UserDocument = HydratedDocument<User>;
 
-@Schema()
+@Schema({
+  toJSON: {
+    virtuals: true,
+  },
+  toObject: {
+    virtuals: true,
+  },
+})
 export class User {
-  @Prop()
+  @Prop({
+    required: true,
+    select: false,
+  })
   password: string;
   @Prop()
   user_name: string;
@@ -17,3 +27,10 @@ export class User {
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
+
+UserSchema.virtual('songs', {
+  foreignField: 'artists',
+  localField: '_id',
+  ref: 'Song',
+  options: {},
+});

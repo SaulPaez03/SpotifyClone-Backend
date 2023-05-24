@@ -17,6 +17,8 @@ import {
   FileFieldsInterceptor,
   FileInterceptor,
 } from '@nestjs/platform-express';
+import { User } from 'src/auth/auth.decorator';
+import { ReqUser } from 'src/auth/auth.interface';
 
 @Controller('songs')
 export class SongsController {
@@ -28,10 +30,14 @@ export class SongsController {
     @UploadedFile()
     file: Express.Multer.File,
     @Body() body: createSongDTO,
+    @User() user: ReqUser,
   ) {
-    return this.songsService.createNewSong({
-      ...body,
-      data: file,
-    });
+    return this.songsService.createNewSong(
+      {
+        ...body,
+        data: file,
+      },
+      user,
+    );
   }
 }

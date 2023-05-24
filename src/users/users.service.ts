@@ -11,12 +11,18 @@ export class UsersService {
     return await this.userModel.findById(id);
   }
   async findByUsername(username: string) {
-    return await this.userModel.findOne({
-      user_name: username,
-    });
+    return await this.userModel
+      .findOne({
+        user_name: username,
+      })
+      .select('+password');
   }
 
   async createNewUser(user: User) {
     return await this.userModel.create(user);
+  }
+
+  async findAllUsers() {
+    return await this.userModel.find();
   }
 }
